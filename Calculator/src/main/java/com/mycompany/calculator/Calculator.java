@@ -7,6 +7,8 @@ public class Calculator {
 
     //methods for functionality
     
+    //Learning to do automated commit
+    
     public int add(int a, int b) {
         return a + b;
     }
