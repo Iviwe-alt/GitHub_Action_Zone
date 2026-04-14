@@ -32,7 +32,7 @@ public class LoginTest {
         assertFalse(login.checkPasswordComplexity());
     }
 
-    // Test 5: Valid cell phone number
+    // Test 5: Valid cell phone number 
     @Test
     public void testValidCellNumber() {
         Login login = new Login("Blow_", "Mess@525", "+27678900135");
