@@ -10,4 +10,16 @@
         <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>com.quickchat.quickchat.QuickChat</exec.mainClass>
     </properties>
-</project>
+    
+    <dependencies> 
+        <dependency> 
+            <groupId>org.junit.jupiter</groupId> 
+            <artifactId>junit-jupiter</artifactId> 
+            <version>5.10.0</version> 
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project> 
+        
+            
+      
