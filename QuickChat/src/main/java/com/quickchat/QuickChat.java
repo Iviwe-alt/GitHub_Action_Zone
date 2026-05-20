@@ -72,6 +72,7 @@ public class QuickChat {
                     int actionChoice = input.nextInt();
                     input.nextLine();
                     
+                    // Prompt user for username credentials to access the console system menu
                     //Run action logic status response
                     String statusResult = tempMsg.SentMessage(actionChoice);
                     System.out.println("Status: " + statusResult);
