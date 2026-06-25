@@ -157,7 +157,7 @@ public class MessageManager {
             // Close up JSON syntax brackets
             writer.println("  ]");
             writer.println("}");
-            System.out.println("\n[SUCCESS] Saved data to: " + file.getAbsolutePath());
+            System.out.println("\n[FILE SUCCESS] Saved data to: " + file.getAbsolutePath());
             
         } catch (java.io.IOException e) {
             // Basic catch printout if things go wrong or file is locked
