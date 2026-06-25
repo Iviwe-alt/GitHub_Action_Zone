@@ -121,7 +121,7 @@ public class MessageManager {
             // Just linking everything together with standard labels and breaks
             report += "Message Hash: " + msg.getMessageHash()
                     + "\nRecipient: " + msg.getRecipient()
-                    + "\nMessage: " + msg.getMessageText()
+                    + "\nText Content: " + msg.getMessageText()
                     + "\n\n";
         }
         return report.trim();
