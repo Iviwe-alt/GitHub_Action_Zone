@@ -8,3 +8,4 @@ An interactive, terminal-based real-time communication application built using J
 * **Length Validation Constraints
 * **Recipient Format Verification
 * **Automated Data Accumulation
+### Project Status: Task 3 completed and verified
