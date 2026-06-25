@@ -1,3 +1,4 @@
+// Core logic handler for storing, deleting, and printing messages
 package com.quickchat;
 
 import java.util.ArrayList;
