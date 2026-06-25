@@ -43,8 +43,7 @@ public class Message {
             return false;
         }
     }
-
-    // Validates formatting structure to ensure recipient numbers are properly categorized
+    
     //2. Method to ensure recipient cell number is correctly formatted
     public String checkRecipientCell() { 
         //Simple validation checks to see if it starts with valid prefixes
@@ -56,8 +55,7 @@ public class Message {
         }
         return "Cell phone number is incorrectly formatted or does not exist. Please check the number and try again.";
     }
-
-    // Verifcation rule ensuring the string length does not exceed assignment parameters
+    
     //Helper validation method for checking message length limits
     public String verifyMessageLength() {
         if (this.messageText.length() <= 250) {
@@ -121,4 +119,13 @@ public class Message {
         return this.messageHash;
     }
     
+
+
+public String getRecipient() {
+    return recipient; 
+} 
+
+public String getMessageText() { 
+    return messageText; 
+}
 }

@@ -72,7 +72,6 @@ public class QuickChat {
                     int actionChoice = input.nextInt();
                     input.nextLine();
                     
-                    // Prompt user for username credentials to access the console system menu
                     //Run action logic status response
                     String statusResult = tempMsg.SentMessage(actionChoice);
                     System.out.println("Status: " + statusResult);
@@ -89,10 +88,7 @@ public class QuickChat {
                     } else {
                         System.out.println("Message discarded and cleared from active process.");
                         
-                    }
-                    
-                    
-                    
+                    }  
                             
                 }
             } else if (menuSelection == 2 ) {
@@ -110,20 +106,75 @@ public class QuickChat {
                 }
                 
                 if (!foundAny) {
-                    System.out.println("No history found. This feature is still in development or empty.");
-                    
+                    System.out.println("No history found. This feature is still in development or empty.");   
                 }
-            } else if (menuSelection == 3) {
-                //Requirement 6: Display total accumulated message summary upon exit execution
-                System.out.println("\n-------------------------------");
-                System.out.println("Total number of messages accumulated and sent: " + totalSentCount);
-                System.out.println("Thank you for using QuickChat. Goodbye!");
+           } else if (menuSelection == 3) {
+            // Option 3 handles any custom feature you have or you can leave it placeholder empty
+            System.out.println("Feature option 3 selected.");
+
+        } else if (menuSelection == 4) {
+            // --- STORED MESSAGES SUB-MENU ---
+            char subChoice = ' ';
+            while (subChoice != 'q') {
+                System.out.println("\n--- STORED MESSAGES MANAGEMENT ---");
+                System.out.println("a) Display the longest stored message");
+                System.out.println("b) Search for a message ID");
+                System.out.println("c) Search all messages for a particular recipient");
+                System.out.println("d) Save all data to JSON file");
+                System.out.println("e) Delete a message using hash");
+                System.out.println("f) Display complete message report");
+                System.out.println("q) Back to Main Menu");
+                System.out.print("Select choice: ");
                 
-            } else {
-                System.out.println("Invalid menu choice selection. Please try again.");
+                subChoice = input.nextLine().toLowerCase().charAt(0);
+                switch(subChoice) {
+                    case 'a':
+                        String longest = MessageManager.getLongestMessage();
+                        System.out.println("Longest Stored Message: " + longest);
+                        break;
+                        
+                    case 'b':
+                        System.out.print("Enter Message ID to search: ");
+                        String searchID = input.nextLine();
+                        String idResult = MessageManager.searchMessageID(searchID);
+                        System.out.println(idResult);
+                        break;
+                        
+                    case 'c':
+                        System.out.print("Enter Recipient Cell Number: ");
+                        String recipient = input.nextLine();
+                        String recResult = MessageManager.searchRecipient(recipient);
+                        System.out.println("Messages found:\n" + recResult);
+                        break;
+                        
+                    case 'd':
+                        MessageManager.saveToJSONFile();
+                        break;
+                        
+                    case 'e':
+                        System.out.print("Enter Message Hash to delete: ");
+                        String hashInput = input.nextLine();
+                        String deleteOutput = MessageManager.deleteMessageByHash(hashInput);
+                        System.out.println(deleteOutput);
+                        break;
+                        
+                    case 'f':
+                        System.out.println("\n=== REPORT ===");
+                        String fullReport = MessageManager.displayReport();
+                        System.out.println(fullReport);
+                        break; 
+                }
             }
-            
-              
+
+        } else if (menuSelection == 5) {
+            // Requirement 6: Display total accumulated message summary upon exit execution
+            System.out.println("\n------------------------------------");
+            System.out.println("Total number of messages accumulated and sent: " + totalSentCount);
+            System.out.println("Thank you for using QuickChat. Goodbye!");
+
+        } else {
+            System.out.println("Invalid menu choice selection. Please try again.");
+        }
         }
         
         input.close();

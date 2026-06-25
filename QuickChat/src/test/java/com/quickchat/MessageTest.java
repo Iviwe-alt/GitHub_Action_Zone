@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class MessageTest {
     
     //1. Test for message length under/at 250 characters 
-    @Test //================== AUTOMATED VALIDATION TESTING SUITE =====================
+    @Test 
     public void testVerifyMessageLengthSuccess() {
         Message msg = new Message(0, "+277186930002", "HI Mike, can you join us for dinner tonight?");
         String expected = "Message ready to send.";
