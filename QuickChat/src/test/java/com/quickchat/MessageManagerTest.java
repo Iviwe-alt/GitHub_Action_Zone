@@ -1,3 +1,4 @@
+// Unit testing suite for assignment verification
 package com.quickchat;
 
 import org.junit.jupiter.api.Test;
