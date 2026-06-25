@@ -111,7 +111,7 @@ public class MessageManager {
             }
         }
 
-        return "Message hash not found.";
+        return "Error: Hash code not found.";
     }
     
     // Merges sent messages details into a neat string report block
